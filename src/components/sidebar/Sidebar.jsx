@@ -22,51 +22,51 @@ function Sidebar() {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon />
+            <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
           <p className="title">Lists</p>
           <li>
-            <PersonOutlineOutlinedIcon />
+            <PersonOutlineOutlinedIcon className="icon" />
             <span>Users</span>
           </li>
           <li>
-            <InventoryIcon />
+            <InventoryIcon className="icon" />
             <span>Products</span>
           </li>
           <li>
-            <PaymentIcon />
+            <PaymentIcon className="icon" />
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon />
+            <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
           <p className="title">USEFUL LINKS</p>
           <li>
-            <QueryStatsIcon />
+            <QueryStatsIcon className="icon" />
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon />
+            <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
-            <SettingsSystemDaydreamIcon />
+            <SettingsSystemDaydreamIcon className="icon" />
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyIcon />
+            <PsychologyIcon className="icon" />
             <span>Logs</span>
           </li>
           <p className="title">USER</p>
           <li>
-            <AccountCircleIcon />
+            <AccountCircleIcon className="icon" />
             <span>Profile</span>
           </li>
           <li>
-            <LogoutIcon />
+            <LogoutIcon className="icon" />
             <span>Logout</span>
           </li>
         </ul>
