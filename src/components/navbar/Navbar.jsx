@@ -8,37 +8,37 @@ import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined"
 
 function Navbar() {
   return (
-    <div className="sidebar">
+    <div className="navbar">
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
-      </div>
-      <div className="items">
-        <div className="item">
-          <LanguageOutlinedIcon />
-          English
-        </div>
-        <div className="item">
-          <DarkModeOutlinedIcon />
-          English
-        </div>
-        <div className="item">
-          <NotificationsNoneOutlinedIcon />
-          English
-        </div>
-        <div className="item">
-          <DarkModeOutlinedIcon />
-          English
-        </div>
-        <div className="item">
-          <ChatBubbleOutlineOutlinedIcon />
-          English
-        </div>
-        <div className="item">
-          <ListAltOutlinedIcon />
-          English
+        <div className="items">
+          <div className="item">
+            <LanguageOutlinedIcon />
+            English
+          </div>
+          <div className="item">
+            <DarkModeOutlinedIcon />
+            English
+          </div>
+          <div className="item">
+            <NotificationsNoneOutlinedIcon />
+            English
+          </div>
+          <div className="item">
+            <DarkModeOutlinedIcon />
+            English
+          </div>
+          <div className="item">
+            <ChatBubbleOutlineOutlinedIcon />
+            English
+          </div>
+          <div className="item">
+            <ListAltOutlinedIcon />
+            English
+          </div>
         </div>
       </div>
     </div>
