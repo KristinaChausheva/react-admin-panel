@@ -18,6 +18,7 @@
       align-items: center;
       border: 0.5px solid lightgray;
       padding: 0.5em;
+      // max-height: 50px;
 
       input {
         border: none;
@@ -38,6 +39,32 @@
         display: flex;
         align-items: center;
         margin: 1em;
+        position: relative;
+
+        .icon {
+          font-size: 2em;
+        }
+
+        .avatar {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          justify-content: center;
+          font-size: small;
+          font-weight: bold;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
       }
     }
   }

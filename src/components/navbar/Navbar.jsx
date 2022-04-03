@@ -5,6 +5,7 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined"
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined"
 import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined"
+import ZoomInMapOutlinedIcon from "@mui/icons-material/ZoomInMapOutlined"
 
 function Navbar() {
   return (
@@ -12,32 +13,36 @@ function Navbar() {
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon />
+          <SearchOutlinedIcon className="icon" />
         </div>
         <div className="items">
           <div className="item">
-            <LanguageOutlinedIcon />
+            <LanguageOutlinedIcon className="icon" />
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon />
-            English
+            <DarkModeOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon />
-            English
+            <NotificationsNoneOutlinedIcon className="icon" />
+            <div className="counter">1</div>
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon />
-            English
+            <ZoomInMapOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <ChatBubbleOutlineOutlinedIcon />
-            English
+            <ChatBubbleOutlineOutlinedIcon className="icon" />
+            <div className="counter">2</div>
           </div>
           <div className="item">
-            <ListAltOutlinedIcon />
-            English
+            <ListAltOutlinedIcon className="icon" />
+          </div>
+          <div className="item">
+            <img
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="avatar"
+              className="avatar"
+            />
           </div>
         </div>
       </div>
