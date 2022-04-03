@@ -20,10 +20,12 @@ function Sidebar() {
       <hr />
       <div className="center">
         <ul>
+          <p className="title">MAIN</p>
           <li>
             <DashboardIcon />
             <span>Dashboard</span>
           </li>
+          <p className="title">Lists</p>
           <li>
             <PersonOutlineOutlinedIcon />
             <span>Users</span>
@@ -40,6 +42,7 @@ function Sidebar() {
             <LocalShippingIcon />
             <span>Delivery</span>
           </li>
+          <p className="title">USEFUL LINKS</p>
           <li>
             <QueryStatsIcon />
             <span>Stats</span>
@@ -48,6 +51,7 @@ function Sidebar() {
             <NotificationsNoneIcon />
             <span>Notifications</span>
           </li>
+          <p className="title">SERVICE</p>
           <li>
             <SettingsSystemDaydreamIcon />
             <span>System Health</span>
@@ -56,6 +60,7 @@ function Sidebar() {
             <PsychologyIcon />
             <span>Logs</span>
           </li>
+          <p className="title">USER</p>
           <li>
             <AccountCircleIcon />
             <span>Profile</span>
