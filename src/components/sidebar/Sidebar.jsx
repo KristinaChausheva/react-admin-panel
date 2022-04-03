@@ -71,7 +71,7 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="bottom">colomn</div>
+      <div className="bottom">color options</div>
     </div>
   )
 }
