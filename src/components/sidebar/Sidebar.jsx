@@ -25,7 +25,7 @@ function Sidebar() {
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
-          <p className="title">Lists</p>
+          <p className="title">LISTS</p>
           <li>
             <PersonOutlineOutlinedIcon className="icon" />
             <span>Users</span>
