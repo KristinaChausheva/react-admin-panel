@@ -71,7 +71,10 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="bottom">color options</div>
+      <div className="bottom">
+        <div className="colorOptions">div1</div>
+        <div className="colorOptions">div2</div>
+      </div>
     </div>
   )
 }
