@@ -5,5 +5,11 @@
   .homeContainer {
     background-color: lightcoral;
     flex: 6;
+
+    .widgets {
+      display: flex;
+      padding: 2em;
+      gap: 2em;
+    }
   }
 }
