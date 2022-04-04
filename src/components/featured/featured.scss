@@ -3,6 +3,7 @@
   box-shadow: 2px 4px 10px 1px rgbs(201, 201, 201, 0.47);
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, $alpha: 0.47);
   padding: 1em;
+  background-color: white;
 
   .top {
     display: flex;
@@ -17,7 +18,7 @@
   }
 
   .bottom {
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,8 +35,9 @@
       color: gray;
     }
 
-    .amout {
+    .amount {
       font-size: 2em;
+      margin: 0;
     }
 
     .desc {
@@ -43,6 +45,36 @@
       font-style: 1em;
       color: gray;
       text-align: center;
+    }
+
+    .summary {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .item {
+        text-align: center;
+
+        .itemTitle {
+          font-size: 1em;
+          color: gray;
+        }
+
+        .itemResult {
+          display: flex;
+          align-items: center;
+          margin-top: 1em;
+          font-style: 1em;
+
+          &.positive {
+            color: green;
+          }
+          &.negative {
+            color: red;
+          }
+        }
+      }
     }
   }
 }
