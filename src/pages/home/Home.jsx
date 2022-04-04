@@ -10,10 +10,10 @@ function Home() {
       <div className="homeContainer">
         <Navbar />
         <div className="widgets">
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
+          <Widget type="user" />
+          <Widget type="order" />
+          <Widget type="earning" />
+          <Widget type="balance" />
         </div>
       </div>
     </div>
