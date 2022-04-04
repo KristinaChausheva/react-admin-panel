@@ -6,10 +6,15 @@
     background-color: lightcoral;
     flex: 6;
 
-    .widgets {
+    .widgets,
+    .charts {
       display: flex;
       padding: 2em;
       gap: 2em;
+    }
+
+    .charts {
+      padding: 0.3em 1em;
     }
   }
 }
