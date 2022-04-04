@@ -15,4 +15,34 @@
       font-weight: 500;
     }
   }
+
+  .bottom {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3em;
+
+    .featuredChart {
+      width: 10em;
+      height: 10em;
+    }
+
+    .title {
+      font-weight: 500;
+      color: gray;
+    }
+
+    .amout {
+      font-size: 2em;
+    }
+
+    .desc {
+      font-weight: 300;
+      font-style: 1em;
+      color: gray;
+      text-align: center;
+    }
+  }
 }
