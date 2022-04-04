@@ -19,7 +19,15 @@ function Widget({ type }) {
         title: "USERS",
         isMoney: false,
         link: "see all users",
-        icon: <PersonOutlinedIcon className="icon" />,
+        icon: (
+          <PersonOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+              color: "crimson",
+            }}
+          />
+        ),
       }
       break
     case "order":
@@ -27,7 +35,15 @@ function Widget({ type }) {
         title: "ORDERS",
         isMoney: false,
         link: "see all orders",
-        icon: <ShoppingCartOutlinedIcon className="icon" />,
+        icon: (
+          <ShoppingCartOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(218, 165, 32, 0.2)",
+              color: "goldenrod",
+            }}
+          />
+        ),
       }
       break
     case "earning":
@@ -35,7 +51,15 @@ function Widget({ type }) {
         title: "EARNINGS",
         isMoney: true,
         link: "see all earning",
-        icon: <MonetizationOnOutlinedIcon className="icon" />,
+        icon: (
+          <MonetizationOnOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(0, 128, 0, 0.2)",
+              color: "green",
+            }}
+          />
+        ),
       }
       break
     case "balance":
@@ -43,7 +67,15 @@ function Widget({ type }) {
         title: "BALANCE",
         isMoney: true,
         link: "see details",
-        icon: <AccountBalanceWalletOutlinedIcon className="icon" />,
+        icon: (
+          <AccountBalanceWalletOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(128, 0, 128, 0.2)",
+              color: "purple",
+            }}
+          />
+        ),
       }
       break
     default:
