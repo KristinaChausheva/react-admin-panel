@@ -65,7 +65,10 @@ function TableList() {
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell className="tabelCell">{row.id}</TableCell>
-              <TableCell className="tabelCell">{row.product}</TableCell>
+              <div className="cellWrapper">
+                <img src={row.img} alt="" className="image" />
+                {row.product}
+              </div>
               <TableCell className="tabelCell"> {row.customer}</TableCell>
               <TableCell className="tabelCell">{row.date}</TableCell>
               <TableCell className="tabelCell">{row.amount}</TableCell>
