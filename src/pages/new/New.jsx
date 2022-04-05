@@ -3,14 +3,14 @@ import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined"
 
-function New() {
+function New({ inputs, title }) {
   return (
     <div className="new">
       <Sidebar />
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Add New User</h1>
+          <h1>{title}</h1>
         </div>
         <div className="bottom">
           <div className="left">
@@ -28,7 +28,14 @@ function New() {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
-              <div className="formInput">
+
+              {inputs.map((input) => (
+                <div className="formInput" key={input.id}>
+                  <label htmlFor="">{input.label}</label>
+                  <input type={input.type} placeholder={input.placeholder} />
+                </div>
+              ))}
+              {/* <div className="formInput">
                 <label>Username</label>
                 <input type="text" placeholder="john_doe" />
               </div>
@@ -55,7 +62,7 @@ function New() {
               <div className="formInput">
                 <label>Country</label>
                 <input type="text" placeholder="USA" />
-              </div>
+              </div> */}
               <button>SEND</button>
             </form>
           </div>
