@@ -1,6 +1,7 @@
 import "./datatable.scss"
 import { DataGrid } from "@mui/x-data-grid"
 import { userColumns, userRows } from "../../datasourse"
+import { Link } from "react-router-dom"
 
 function Datatable() {
   const actionColumn = [
@@ -20,7 +21,14 @@ function Datatable() {
   ]
   return (
     <div className="datatable">
+      <div className="datatableTitle">
+        Add New User
+        <Link to="/users/new" className="link">
+          Add New
+        </Link>
+      </div>
       <DataGrid
+        className="datagrid"
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         pageSize={5}
