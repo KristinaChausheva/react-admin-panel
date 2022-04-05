@@ -59,9 +59,9 @@ function Chart() {
               <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <XAxis dataKey="name" />
-          <YAxis />
-          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" stroke="gray" />
+          {/* <YAxis /> */}
+          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
           <Tooltip />
           <Area
             type="monotone"
@@ -70,13 +70,6 @@ function Chart() {
             fillOpacity={1}
             fill="url(#total)"
           />
-          {/* <Area
-            type="monotone"
-            dataKey="pv"
-            stroke="#82ca9d"
-            fillOpacity={1}
-            fill="url(#colorPv)"
-          /> */}
         </AreaChart>
       </ResponsiveContainer>
     </div>
