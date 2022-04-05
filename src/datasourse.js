@@ -1,9 +1,9 @@
 export const userColumns = [
-  { field: "id", headerName: "ID", width: 70 },
+  { field: "id", headerName: "ID", flex: 1 },
   {
     field: "user",
     headerName: "User",
-    width: 230,
+    flex: 2,
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
@@ -16,18 +16,18 @@ export const userColumns = [
   {
     field: "email",
     headerName: "Email",
-    width: 230,
+    flex: 2,
   },
 
   {
     field: "age",
     headerName: "Age",
-    width: 100,
+    flex: 1,
   },
   {
     field: "status",
     headerName: "Status",
-    width: 160,
+    flex: 2,
     renderCell: (params) => {
       return (
         <div className={`cellWithStatus ${params.row.status}`}>

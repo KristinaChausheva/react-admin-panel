@@ -1,6 +1,7 @@
 .datatable {
   height: 600px;
   padding: 20px;
+  width: "80%";
 
   .datatableTitle {
     width: 100%;
@@ -21,6 +22,10 @@
       border-radius: 5px;
       cursor: pointer;
     }
+  }
+
+  .datagrid {
+    flex: 1;
   }
 
   .cellWithImg {
