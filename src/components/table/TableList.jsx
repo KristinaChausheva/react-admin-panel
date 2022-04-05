@@ -53,7 +53,7 @@ function TableList() {
   ]
   return (
     <TableContainer component={Paper} className="table">
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 0 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell className="tabelCell">Tracking ID</TableCell>
@@ -69,7 +69,7 @@ function TableList() {
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell className="tabelCell">{row.id}</TableCell>
-              <div className="cellWrapper">
+              <div className="cellWrapper ">
                 <img src={row.img} alt="" className="image" />
                 {row.product}
               </div>
