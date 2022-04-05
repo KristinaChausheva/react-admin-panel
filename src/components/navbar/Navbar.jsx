@@ -39,7 +39,7 @@ function Navbar() {
           </div>
           <div className="item">
             <img
-              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://scontent-muc2-1.xx.fbcdn.net/v/t1.18169-9/11825793_10207545460584331_2274065792767588975_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=QVnNTMKMYBEAX9G3_dU&_nc_oc=AQnRpbGXFbUZG24kRN5q3a7WjP3ij4Mcxy7A5ji8ys7E6ISiNuhSZfetNQFmIIR6ZYKcEXoWX301wioFjF9ff3xv&_nc_ht=scontent-muc2-1.xx&oh=00_AT-kJrB7fMxOa4X1l3U6BkIzV4zaFWGLq6uGdiCHWcPFFw&oe=6270E653"
               alt="avatar"
               className="avatar"
             />
