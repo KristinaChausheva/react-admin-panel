@@ -26,7 +26,7 @@ function TableList() {
       customer: "John Doe",
       date: "1 March",
       method: "Cash on Delivery",
-      status: "Approved",
+      status: "Pending",
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ function TableList() {
       customer: "John Doe",
       date: "1 March",
       method: "Cash on Delivery",
-      status: "Approved",
+      status: "Pending",
     },
   ]
   return (
@@ -73,7 +73,9 @@ function TableList() {
               <TableCell className="tabelCell">{row.date}</TableCell>
               <TableCell className="tabelCell">{row.amount}</TableCell>
               <TableCell className="tabelCell">{row.method}</TableCell>
-              <TableCell className="tabelCell">{row.status}</TableCell>
+              <TableCell className="tabelCell">
+                <span className={`status ${row.status}`}>{row.status}</span>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

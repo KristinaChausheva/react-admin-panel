@@ -10,5 +10,19 @@
       margin-right: 1em;
       object-fit: cover;
     }
+
+    .status {
+      padding: 1em;
+      border-radius: 5px;
+
+      .Approved {
+        color: green;
+        background-color: rgba($color: green, $alpha: 0.151);
+      }
+      .Pending {
+        color: goldenrod;
+        background-color: rgba($color: goldenrod, $alpha: 0.103);
+      }
+    }
   }
 }
