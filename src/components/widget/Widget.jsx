@@ -8,7 +8,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 
 function Widget({ type }) {
   let data
-  console.log(type)
+  // console.log(type)
   //temp var
   const amount = 100
   const diff = 20
