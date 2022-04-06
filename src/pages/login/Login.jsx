@@ -2,10 +2,14 @@ import "./login.scss"
 import { useState } from "react"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../firebase"
+import { useNavigate } from "react-router-dom"
+
 function Login() {
   const [error, setError] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+
+  const navigate = useNavigate()
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -14,8 +18,8 @@ function Login() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user
-        console.log(user)
-        // ...
+        // console.log(user)
+        navigate("/")
       })
       .catch((error) => {
         const errorCode = error.code
@@ -38,7 +42,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
-        <span>Wrong email or password</span>
+        {error && <span>Wrong email or password!</span>}
       </form>
     </div>
   )
