@@ -67,8 +67,9 @@
     display: flex;
     align-items: center;
     margin: 1em;
+    min-height: 5em;
 
-    .colorOptions {
+    .colorOption {
       width: 2em;
       height: 2em;
       border-radius: 0.3em;
@@ -76,7 +77,7 @@
       cursor: pointer;
       margin: 0.3em;
 
-      &:nth-child(1) {
+      &:nth-child(2) {
         background-color: whitesmoke;
       }
       &:nth-child(1) {
