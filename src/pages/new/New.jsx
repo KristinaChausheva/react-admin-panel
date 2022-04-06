@@ -4,8 +4,45 @@ import Navbar from "../../components/navbar/Navbar"
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined"
 import { useState } from "react"
 
+import {
+  addDoc,
+  doc,
+  serverTimestamp,
+  setDoc,
+  collection,
+} from "firebase/firestore"
+
+import { auth, db } from "../../firebase"
+import { createUserWithEmailAndPassword } from "firebase/auth"
+
 function New({ inputs, title }) {
   const [file, setFile] = useState("")
+  const [data, setData] = useState({})
+
+  const handleInput = (e) => {
+    const id = e.target.id
+    const value = e.target.value
+    setData({ ...data, [id]: value })
+  }
+
+  // console.log(data)
+
+  const handleAddNewUser = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        data.email,
+        data.password
+      )
+      await setDoc(doc(db, "users", res.user.uid), {
+        ...data,
+        timeStamp: serverTimestamp(),
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   // console.log(file)
   return (
@@ -28,7 +65,7 @@ function New({ inputs, title }) {
             />
           </div>
           <div className="right">
-            <form action="">
+            <form onSubmit={handleAddNewUser}>
               <div className="formInput">
                 <label htmlFor="file">
                   Upload Image:{" "}
@@ -45,38 +82,16 @@ function New({ inputs, title }) {
               {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label htmlFor="">{input.label}</label>
-                  <input type={input.type} placeholder={input.placeholder} />
+                  <input
+                    id={input.id}
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    onChange={handleInput}
+                  />
                 </div>
               ))}
-              {/* <div className="formInput">
-                <label>Username</label>
-                <input type="text" placeholder="john_doe" />
-              </div>
-              <div className="formInput">
-                <label>Name and Surname</label>
-                <input type="text" placeholder="John Doe" />
-              </div>
-              <div className="formInput">
-                <label>Email</label>
-                <input type="email" placeholder="john_doe@gmail.com" />
-              </div>
-              <div className="formInput">
-                <label>Phone</label>
-                <input type="phone" placeholder="+ 001 234 567 89" />
-              </div>
-              <div className="formInput">
-                <label>Password</label>
-                <input type="password" />
-              </div>
-              <div className="formInput">
-                <label>Address</label>
-                <input type="text" placeholder="Elton St. 217 New York" />
-              </div>
-              <div className="formInput">
-                <label>Country</label>
-                <input type="text" placeholder="USA" />
-              </div> */}
-              <button>SEND</button>
+
+              <button type="submit">SEND</button>
             </form>
           </div>
         </div>
