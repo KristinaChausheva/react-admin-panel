@@ -2,8 +2,12 @@ import "./login.scss"
 
 function Login() {
   return (
-    <div className="home">
-      <h1 className="title">Login Page</h1>
+    <div className="login">
+      <form action="">
+        <input type="email" placeholder="email" />
+        <input type="password" placeholder="password" />
+        <button type="submit">Login</button>
+      </form>
     </div>
   )
 }
