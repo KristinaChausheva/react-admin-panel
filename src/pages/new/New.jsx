@@ -17,16 +17,20 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 
+import { useNavigate } from "react-router-dom"
+
 function New({ inputs, title }) {
   const [file, setFile] = useState("")
   const [data, setData] = useState({})
   const [per, setPer] = useState(null)
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     const uploadFile = () => {
       const name = new Date().getTime() + file.name
       // console.log(name)
-      const storageRef = ref(storage, file.name)
+      const storageRef = ref(storage, name)
 
       const uploadTask = uploadBytesResumable(storageRef, file)
 
@@ -82,6 +86,7 @@ function New({ inputs, title }) {
         ...data,
         timeStamp: serverTimestamp(),
       })
+      navigate("/users")
     } catch (error) {
       console.log(error)
     }
